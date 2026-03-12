@@ -167,9 +167,3 @@ Este projeto também tem como objetivo:
 # 👨‍💻 Autor
 
 Desenvolvido por **Rodrigo da Silva Sousa**
-
----
-
-# 🔗 GitHub: 
-
-https://github.com/Rodrigo-Sousa
