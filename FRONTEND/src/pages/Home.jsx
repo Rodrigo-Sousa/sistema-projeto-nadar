@@ -22,7 +22,7 @@ export default function Home() {
     };
 
     return (
-        <div className="h-screen bg-gray-900 text-white flex flex-col items-center justify-center">
+        <div className="h-screen bg-blue-900 text-white flex flex-col items-center justify-center">
             <h1 className="text-3xl mb-4">
                 Bem-vindo, {user?.name}
             </h1>

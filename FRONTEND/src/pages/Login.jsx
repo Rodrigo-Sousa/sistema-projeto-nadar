@@ -34,9 +34,9 @@ export default function Login() {
     // Retornando
 
     return (
-        <div className="flex items-center justify-center h-screen bg-gray-900">
+        <div className="flex items-center justify-center h-screen bg-blue-900">
             {/* Formulário */}
-            <form onSubmit={handleSubmit} className="bg-gray-800 p-8 rounded-2xl shadow-lg w-96">
+            <form onSubmit={handleSubmit} className="bg-blue-800 p-8 rounded-2xl shadow-lg w-96">
                 {/* Título do formulário */}
                 <h2 className="text-white text-2xl mb-6 text-center">
                     Login - Projeto Nadar
@@ -51,7 +51,7 @@ export default function Login() {
                 <input
                     type="email"
                     placeholder="email@projetonadar.com.br"
-                    className="w-full p-3 mb-4 rounded bg-gray-700 text-white"
+                    className="w-full p-3 mb-4 rounded bg-blue-700 text-white focus:outline-white"
                     value={email}
                     onChange={(event) => setEmail(event.target.value)}
                 />
@@ -59,13 +59,13 @@ export default function Login() {
                 <input
                     type="password"
                     placeholder="Senha"
-                    className="w-full p-3 mb-4 rounded bg-gray-700 text-white"
+                    className="w-full p-3 mb-4 rounded bg-blue-700 text-white focus:outline-white"
                     value={password}
                     onChange={(event) => setPassword(event.target.value)}
                 />
 
                 {/* Botão para submeter o formulário */}
-                <button type="submit" className="w-full bg-glue-600 hover:bg-blue-700 p-3 rounded text-white font-bold">
+                <button type="submit" className="w-full bg-green-600 hover:bg-green-500 p-3 rounded text-white font-bold">
                     {loading ? "Entrando..." : "Entrar"}
                 </button>
             </form>
