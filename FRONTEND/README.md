@@ -71,3 +71,7 @@ Instalaremos a biblioteca `react-router-dom` para gerenciar a navegação e rota
 - Ao clicar no botão "sair", redirecionado para a página príncipal.
 
 ![Logout](../img/03.2-logout.png)
+
+- Login realizado e logout. (Dados mockados)
+
+![Gif - Login, tela home e logout](../img/03.3-login-gif.gif)
