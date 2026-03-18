@@ -1,21 +1,27 @@
-export default function App() {
-  console.log('Teste no console do navegador');
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Login from "./pages/Login";
+import Home from "./pages/Home";
+import PrivateRoute from "./routes/PrivateRoute";
+import { AuthProvider } from "./context/AuthContext";
 
+function App(){
   return (
-    <div>
-      <header>
-        <div className="bg-gray-100 mx-auto p-4">
-          <h1 className="text-center font-semibold text-xl">
-            Projeto nadar, renderizado no navegador.
-          </h1>
-        </div>
-      </header>
+    <AuthProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/login" element={<Login />} />
 
-      <main>
-        <div className="container mx-auto p-4">
-          <h2>O conteúdo fica aqui.</h2>
-        </div>
-      </main>
-    </div>
+          <Route path="/home" 
+            element={<PrivateRoute>
+              <Home />
+            </PrivateRoute>}
+          />
+
+          <Route path="*" element={<Login />}/>
+        </Routes>
+      </BrowserRouter>
+    </AuthProvider>
   );
 }
+
+export default App;
