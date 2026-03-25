@@ -21,7 +21,7 @@ export default function Home() {
         <div className="h-screen bg-blue-900 text-white flex flex-col">
             <Navbar />
 
-            <h1 className="text-3xl mb-4">
+            <h1 className="text-center text-3xl mb-4">
                 Bem-vindo, {user?.name}
             </h1>
 
