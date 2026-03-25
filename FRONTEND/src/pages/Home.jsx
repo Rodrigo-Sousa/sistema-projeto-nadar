@@ -1,9 +1,12 @@
 import { useContext, useEffect } from "react";
 import { AuthContext } from "../context/AuthContext";
 import { useNavigate } from "react-router-dom";
+// Components
+import Navbar from "../components/navbar/Navbar";
+import Footer from "../components/Footer";
 
 export default function Home() {
-    const { user, handleLogout } = useContext(AuthContext);
+    const { user } = useContext(AuthContext);
     const navigate = useNavigate();
 
     // Utilizando useEffect para realizar o redirecionamento quando clicado em "sair"
@@ -14,26 +17,19 @@ export default function Home() {
         }
     }, [user, navigate]);
 
-    // Lidando com a opção quando clicado em sair
-    const handleExit = () => {
-        // limpando o token e usuário;
-        handleLogout();
-
-    };
-
     return (
-        <div className="h-screen bg-blue-900 text-white flex flex-col items-center justify-center">
+        <div className="h-screen bg-blue-900 text-white flex flex-col">
+            <Navbar />
+
             <h1 className="text-3xl mb-4">
                 Bem-vindo, {user?.name}
             </h1>
 
-            {/* Botão para sair */}
-            <button
-                onClick={handleExit}
-                className="bg-red-600 hover:bg-red-700 px-6 py-2 rounded"
-            >
-                Sair
-            </button>
+            <main className="flex-1 flex items-center justify-center bg-blue-800">
+
+            </main>
+
+            <Footer />
         </div>
     )
 }
