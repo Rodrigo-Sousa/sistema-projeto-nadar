@@ -22,7 +22,7 @@ export default function Navbar() {
                 </li>
 
                 <li>
-                    <Link to="/alunos" className="hover:text-sky-400 transition">
+                    <Link to="/student" className="hover:text-sky-400 transition">
                         Alunos
                     </Link>
                 </li>
