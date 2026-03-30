@@ -41,24 +41,29 @@ export default function Students() {
     const handleCloseModal = () => {
         setIsOpen(false);
     }
+
+    // Função para converter a data, na hora de renderizar, para o padrão brasileiro
+    function formatDateBR(date){
+        return new Date(date).toLocaleDateString("pt-br");
+    }
     // Renderização na página
 
     return (
-        <div className="h-screen flex flex-col min-h-screen bg-gray-100">
+        <div className="h-screen flex flex-col min-h-screen bg-blue-800">
             <Navbar />
             <div className="flex items-center justify-between mb-6 mt-6">
-                <h1 className="text-2xl font-bold text-gray-800 m-2">Alunos</h1>
+                <h1 className="text-2xl font-bold text-white m-2">Alunos</h1>
                 <button
                     onClick={handleNewStudent}
-                    className="bg-blue-600 text-white m-2 px-4 py-2 rounded-lg hover:bg-blue-700 transition"
+                    className="bg-green-600 text-white m-2 px-4 py-2 rounded-lg hover:bg-green-700 transition"
                 >
                     Cadastrar novo aluno
                 </button>
             </div>
 
-            <div className="bg-white shadow-md rounded-xl overflow-hidden m-2">
+            <div className="bg-blue-900 shadow-md rounded-xl overflow-hidden m-2 text-white">
                 <table className="w-full text-left">
-                    <thead className="bg-gray-200">
+                    <thead className="bg-blue-400">
                         <tr>
                             <th className="p-3">Nome</th>
                             <th className="p-3">Data de Nascimento</th>
@@ -79,7 +84,8 @@ export default function Students() {
                             orderStudents.map((student) => (
                                 <tr key={student.id} className="border-t houver:bg-gray-50">
                                     <td className="p-3">{student.name}</td>
-                                    <td className="p-3">{student.birthDate}</td>
+                                    {/* Convertendo data para o padrão brasileiro */}
+                                    <td className="p-3">{formatDateBR(student.birthDate)}</td>
                                     <td className="p-3">{student.address}</td>
                                     <td className="p-3">{student.class}</td>
 

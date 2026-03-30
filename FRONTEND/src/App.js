@@ -21,7 +21,9 @@ function App(){
           <Route path="*" element={<Login />}/>
 
           {/* Rota para direcionar para aluno */}
-          <Route path="/student" element={<Students />} />
+          <Route path="/student" element={<PrivateRoute>
+              <Students />
+            </PrivateRoute>} />
         </Routes>
       </BrowserRouter>
     </AuthProvider>

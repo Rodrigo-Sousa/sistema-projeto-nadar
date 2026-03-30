@@ -76,7 +76,7 @@ export default function StudentModal({ isOpen, onClose, onSave, studentEdition }
                         </label>
                         <input
                             type="date"
-                            name="bitrhDate"
+                            name="birthDate"
                             value={formData.birthDate}
                             onChange={handleChange}
                             
@@ -125,7 +125,7 @@ export default function StudentModal({ isOpen, onClose, onSave, studentEdition }
                         <button 
                             type="button"
                             onClick={onClose}
-                            className="px-4 py-2 rounded-lg bg-gray-300 hover:bg-gray-400 transition"
+                            className="px-4 py-2 rounded-lg text-white bg-red-500 hover:bg-red-700 transition"
 
                         >
                             Cancelar
@@ -133,7 +133,7 @@ export default function StudentModal({ isOpen, onClose, onSave, studentEdition }
 
                         <button
                             type="submit"
-                            className="px-4 py-2 rounded-lg bg-blue-600 text-white houver:bg-glue-700 transition"
+                            className="px-4 py-2 rounded-lg text-white bg-blue-500 hover:bg-blue-700 transition"
                         >
                             {studentEdition ? "Salvar alterações" : "Salvar aluno"}
                         </button>
