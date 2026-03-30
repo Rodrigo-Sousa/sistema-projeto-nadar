@@ -76,5 +76,22 @@ Instalaremos a biblioteca `react-router-dom` para gerenciar a navegação e rota
 
 ![Gif - Login, tela home e logout](../img/03.3-login-gif.gif)
 
-### Tela de Aluno
+### Tela de Aluno + Persistência de dados
 
+- Tela de aluno, ao logar, a rota _student_ está habilitada (rota protegida, só entra se tiver o _token_ de login ativo), podendo cadastrar, editar e os dados ficam salvos no LocalStorage, pronto para integração com o Backend.
+
+1. Tela padrão (sem cadastro de dados)
+
+![Aluno sem cadastro](../img/04.1-alunos.png)
+
+2. Cadastrar aluno
+
+![Tela de cadastro de aluno](../img/04.2-Cadastro%20de%20aluno.png)
+
+3. Editando dados do aluno cadastrado
+
+![Editando dados, aluno](../img/04.3-cadastro-editado.png)
+
+4. Gif da tela de cadastro com edição e persistência dos dados
+
+![Tela de aluno](../img/04.4-tela-aluno-gif.gif)
