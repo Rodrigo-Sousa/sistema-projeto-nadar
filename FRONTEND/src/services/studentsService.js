@@ -15,11 +15,13 @@ export const createStudent = (student) => {
     return updated;
 };
 
+// Editando o usuário no LocalStorage
 export const updateStudent = (studentUpdated) => {
     const students = getStudents();
-    const updated = students.map((student) =>
-        student.id === studentUpdated.id ? studentUpdated : student
-    )
-    updateStudent(updated);
-    return updated
+
+    const updateList = students.map((student) => 
+    student.id === studentUpdated.id ? studentUpdated : student);
+
+    localStorage.setItem("students.json", JSON.stringify(updateList));
+    return updateList;
 }
