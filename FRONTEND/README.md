@@ -75,3 +75,6 @@ Instalaremos a biblioteca `react-router-dom` para gerenciar a navegação e rota
 - Login realizado e logout. (Dados mockados)
 
 ![Gif - Login, tela home e logout](../img/03.3-login-gif.gif)
+
+### Tela de Aluno
+

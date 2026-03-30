@@ -76,7 +76,7 @@ export default function Students() {
                     <tbody>
                         {orderStudents.length === 0 ? (
                             <tr>
-                                <td colSpan={5} className="p-6 text-center text-gray-500">
+                                <td colSpan={5} className="p-6 text-center text-white font-bold">
                                     Nenhum aluno cadastrado ainda.
                                 </td>
                             </tr>
