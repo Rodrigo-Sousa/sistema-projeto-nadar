@@ -36,6 +36,11 @@ export default function Students() {
         }
     }
 
+    // Lidando com a mudança do status, ao clicar em cancelar (fechando a modal).
+
+    const handleCloseModal = () => {
+        setIsOpen(false);
+    }
     // Renderização na página
 
     return (
@@ -45,7 +50,7 @@ export default function Students() {
                 <h1 className="text-2xl font-bold text-gray-800 m-2">Alunos</h1>
                 <button
                     onClick={handleNewStudent}
-                    className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition"
+                    className="bg-blue-600 text-white m-2 px-4 py-2 rounded-lg hover:bg-blue-700 transition"
                 >
                     Cadastrar novo aluno
                 </button>
@@ -79,7 +84,7 @@ export default function Students() {
                                     <td className="p-3">{student.class}</td>
 
                                     <button onClick={() => handleEdition(student)}
-                                        className="bg-yellow-500 text-white px-3 py-1 rounded-lg hover:bg-yellow-600 transition"
+                                        className="bg-yellow-500 text-white mt-1 px-3 py-1 rounded-lg hover:bg-yellow-600 transition"
                                     >
                                         Editar
                                     </button>
@@ -95,7 +100,7 @@ export default function Students() {
 
             <StudentModal
                 isOpen={isOpen}
-                onClose={() => setIsOpen}
+                onClose={handleCloseModal}
                 onSave={handleSave}
                 studentEdition={studyingStudent}
             />
