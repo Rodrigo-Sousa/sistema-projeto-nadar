@@ -31,4 +31,4 @@ Ex:
 
 # DER (Diagrama de Entidade-Relacionamento)
 
-![DER](../img/05-DER-BD.png)
+![DER](../img/05.1-DER-BD-Corrigido.png)
